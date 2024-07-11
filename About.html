@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="Assets/logo.png" type="image/icon type">
+  <title>About Me</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      width: 100%;
+      height: 100%;
+      /* display: flex;
+      align-items: center;
+      justify-content: center; */
+      /* background-color: green; */
+    }
+
+    @keyframes shake {
+      0% {
+        transform: translate(0px, 0px) rotate(0deg);
+      }
+
+      25% {
+        transform: translate(1px, 1px) rotate(1deg);
+      }
+
+      50% {
+        transform: translate(-1px, -1px) rotate(-1deg);
+      }
+
+      75% {
+        transform: translate(2px, 2px) rotate(2deg);
+      }
+
+      100% {
+        transform: translate(-1px, 1px) rotate(-1deg);
+      }
+
+    }
+
+    .about-main {
+      padding: 0 16rem;
+    }
+
+    header {
+      width: 100%;
+    }
+
+    .aboutnavbar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0rem;
+      /* background-color: blueviolet; */
+    }
+
+    .heading-text {
+      margin-top: 2rem;
+      width: 100%;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      font-size: 3.4rem;
+      font-weight: 600;
+      text-align: start;
+      letter-spacing: 2px;
+    }
+
+    .life-pictures {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      align-items: center;
+      flex-direction: column;
+      /* background-color: orange; */
+      height: fit-content;
+      padding: 0 18rem;
+      margin: 4rem 10rem 2rem 0;
+      overflow: visible;
+    }
+
+    .life-pictures img {
+      border-radius: 16px;
+      filter: blur(16px);
+      transition: filter 0.1s ease;
+    }
+
+    .life-pictures img:nth-child(1) {
+      width: fit-content;
+      height: fit-content;
+      z-index: 2;
+      object-fit: cover;
+      scale: 0.6;
+      left: 500px;
+      filter: blur(0px);
+      /* animation: shake 0.6s infinite; */
+    }
+
+    .life-pictures img:nth-child(2) {
+      width: fit-content;
+      position: absolute;
+      height: fit-content;
+      scale: 0.2;
+      filter: blur(8px);
+      -webkit-filter: blur(8px);
+      /* animation: shake 0.6s infinite; */
+
+    }
+
+    .life-pictures img:nth-child(3) {
+      width: fit-content;
+      position: absolute;
+      height: fit-content;
+      scale: 0.3;
+      border-radius: 4rem;
+      /* animation: shake 0.6s infinite; */
+
+    }
+
+    .life-pictures img:nth-child(4) {
+      width: fit-content;
+      position: absolute;
+      height: fit-content;
+      scale: 0.3;
+      background-color: greenyellow;
+      /* padding: 1rem; */
+      border-radius: 4rem;
+      /* animation: shake 0.6s infinite; */
+
+
+
+    }
+
+    .life-pictures img:nth-child(5) {
+      width: fit-content;
+      position: absolute;
+      height: fit-content;
+      scale: 0.3;
+      border-radius: 4rem;
+      /* animation: shake 0.6s infinite; */
+
+    }
+
+    .life-pictures video {
+      width: fit-content;
+      position: absolute;
+      height: fit-content;
+      scale: 0.05;
+      border-radius: 4rem;
+    }
+
+    .texts {
+      width: 100%;
+      margin-top: 2rem;
+      padding: 2rem 14rem;
+      /* background-color: yellowgreen; */
+    }
+
+    .texts h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.7);
+    }
+
+    .texts p {
+      font-weight: 400;
+      margin-top: 4rem;
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 1.3rem;
+    }
+
+    .texts p span {
+      color: black;
+      font-weight: 600;
+      font-size: 1.28rem;
+    }
+
+    .texts p span a {
+      text-decoration: none;
+      color: black;
+      font-weight: 600;
+      font-size: 1.22rem;
+    }
+
+
+    footer {
+      width: 100%;
+      margin-top: 4rem;
+      margin-bottom: -8rem;
+      /* margin: -20rem; */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12rem;
+      flex-direction: row;
+    }
+
+    footer p {
+      font-size: 1.1rem;
+      color: rgba(0, 0, 0, 0.5);
+      font-weight: bold;
+    }
+
+    footer img {
+      height: 1.8rem;
+      width: 1.8rem;
+      margin-right: 1rem;
+      -webkit-filter: invert(1);
+      filter: invert(1);
+      opacity: 0.6;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      font-weight: bold;
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    .footer-links a:hover {
+      color: rgba(0, 0, 0, 0.8);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav class="aboutnavbar">
+      <img src="Assets/logo.png" alt="" class="logo1">
+      <div class="nav-links">
+        <h4><a href="index.html" class="home">Home</a></h4>
+        <h4 class="navactive"><a href=" #">About</a></h4>
+        <h4><a href="Assets/Harsh Kumar_Resume_2024.pdf" target="_blank" class="resume">Resume</a></h4>
+      </div>
+      <img src="Assets/logo.png" alt="" class="logo2">
+    </nav>
+  </header>
+
+  <div class="about-main">
+    <div class="heading-text">
+
+      I'm Harsh,<br>
+      your design wizard, <br>
+      and I’m all out of clever <br>
+      ways to say "Hi!"
+
+    </div>
+
+    <div class="life-pictures">
+      <img src="Assets/LifePictures/thumbnail.avif" alt="">
+      <img src="Assets/LifePictures/1.jpg" alt="" id="image2">
+      <img src="Assets/LifePictures/2.jpg" alt="">
+      <img src="Assets/LifePictures/3.png" alt="">
+      <img src="Assets/LifePictures/4.jpg" alt="">
+      <video src="Assets/LifePictures/vid1.mp4" autoplay loop id="vid1"></video>
+      <video src="Assets/LifePictures/vid2.mp4" autoplay loop id="vid2"></video>
+    </div>
+
+    <div class="texts">
+      <h1>My background is in design & development, but I love everything related to product. I’m a double threat in
+        product and design, meaning I can play on both positions.</h1>
+      <p>I currently work as <span>freelancer</span>. I lead the function of
+        Experience Design and help teams craft high-quality experiences for the products and companies for launch. <br>
+        <br>
+        I wear many different hats. But mainly I focus on Design, and the intersections of Design to
+        Product and Engineering. <br> <br>
+        In the last 1.5 years, I’ve launched a startups as a <span>founding designer.</span> I took ideas on a post-it
+        and created
+        market-ready products and companies. I did that in talented multi-disciplinary founding teams at <span>Maneesha
+          Ruia</span>.
+        <br> <br>
+        Before that I’ve worked at agencies like <span>Maneesha Ruia, Agency Masala, PAGC Foundation</span> and learned
+        that design
+        is
+        simply thinking through a problem and finding an elegant solution. And that being a good designer is more a way
+        of thinking than a way of making things beautiful or being obsessed with a particular design tool.<br><br>
+        I was born and brought up in New Delhi, India. You can find me on X my username
+        is <span><a href="https://x.com/Harsh_kumar_raw">@Harsh_kumar_raw</a>.</span> I’m also on <span><a
+            href="https://www.linkedin.com/in/kumarharsh24/">Linkedin</a></span> and <span><a
+            href="https://github.com/Harsh-833">Github</a></span>.
+      </p>
+    </div>
+
+  </div>
+
+  <footer>
+    <p> Copyright ©️ 2024 </p>
+    <a href="/index.html"> <img src="Assets/logo.png" alt=""></a>
+    <div class="footer-links">
+      <a href="https://x.com/Harsh_kumar_raw">X</a>
+      <a href="https://www.linkedin.com/in/kumarharsh24/">LinkedIn</a>
+      <a href="https://github.com/Harsh-833">Github</a>
+    </div>
+
+  </footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+  <script>
+
+    let tl = gsap.timeline();
+    tl.from(".heading-text", {
+      y: 100,
+      duration: 1,
+      delay: 0,
+      opacity: 0,
+      stagger: 0.5
+    });
+    tl.from(".life-pictures", {
+      y: 100,
+      duration: 1,
+      delay: 0,
+      opacity: 0,
+      stagger: 0.5
+    });
+
+
+    const aboutnav = document.querySelector(".aboutnavbar");
+    gsap.from(aboutnav, {
+      y: -1000,
+      duration: 1,
+      delay: 0,
+    });
+
+
+    //About picture animation
+    const pics = document.querySelector(".life-pictures");
+
+    pics.addEventListener("mouseenter", function () {
+      gsap.to(".life-pictures img:nth-child(2)", {
+        scale: 0.14,
+        left: 150,
+        duration: 0.4,
+        delay: 0,
+        bottom: -250,
+        rotate: 20,
+        borderRadius: 90,
+        filter: "blur(0px)",
+        webkitFilter: "blur(0px)"
+      })
+      gsap.to(".life-pictures img:nth-child(3)", {
+        scale: 0.17,
+        left: 130,
+        duration: 0.4,
+        bottom: -340,
+        delay: 0,
+        rotate: 10,
+        filter: "blur(0px)",
+        webkitFilter: "blur(0px)"
+      })
+      gsap.to(".life-pictures img:nth-child(4)", {
+        scale: 0.15,
+        left: 100,
+        bottom: -160,
+        duration: 0.4,
+        delay: 0,
+        rotate: -10,
+        filter: "blur(0px)",
+        webkitFilter: "blur(0px)"
+      })
+      gsap.to(".life-pictures img:nth-child(5)", {
+        scale: 0.16,
+        left: 0,
+        duration: 0.4,
+        delay: 0,
+        bottom: -450,
+        rotate: 5,
+        filter: "blur(0px)",
+        webkitFilter: "blur(0px)"
+      })
+      gsap.to(".life-pictures img:nth-child(1)", {
+        scale: 0.45,
+        left: 220,
+        duration: 0.4,
+        delay: 0,
+        filter: "blur(0px)",
+        webkitFilter: "blur(0px)"
+      })
+      gsap.to("#vid1", {
+        scale: 0.05,
+        duration: 0.4,
+        left: -750,
+        top: -1800,
+        delay: 0,
+        rotate: -5,
+        filter: "blur(0px)",
+        borderRadius: 200,
+        webkitFilter: "blur(0px)"
+      })
+      gsap.to("#vid2", {
+        scale: 0.1,
+        duration: 0.4,
+        left: 130,
+        top: -680,
+        delay: 0,
+        rotate: 10,
+
+        filter: "blur(0px)",
+        borderRadius: 100,
+        webkitFilter: "blur(0px)"
+      })
+
+      vid1.play();
+      // vid1.currentTime = 0;
+      vid2.play();
+      // vid2.currentTime = 0;
+
+    })
+
+    pics.addEventListener("mouseleave", function () {
+      gsap.to(".life-pictures img:nth-child(2)", {
+        scale: 0.12,
+        left: 50,
+        duration: 0.4,
+        delay: 0,
+        bottom: -300,
+        rotate: -20,
+        filter: "blur(16px)",
+        webkitFilter: "blur(16px)"
+      })
+      gsap.to(".life-pictures img:nth-child(3)", {
+        scale: 0.15,
+        left: 120,
+        duration: 0.4,
+        bottom: -300,
+        delay: 0,
+        rotate: -10,
+        filter: "blur(16px)",
+        webkitFilter: "blur(16px)"
+      })
+      gsap.to(".life-pictures img:nth-child(4)", {
+        scale: 0.15,
+        left: 100,
+        bottom: -250,
+        duration: 0.4,
+        delay: 0,
+        rotate: 10,
+        filter: "blur(16px)",
+        webkitFilter: "blur(16px)"
+      })
+      gsap.to(".life-pictures img:nth-child(5)", {
+        scale: 0.16,
+        left: 20,
+        duration: 0.4,
+        delay: 0,
+        bottom: -380,
+        rotate: -5,
+        filter: "blur(16px)",
+        webkitFilter: "blur(16px)"
+      })
+      gsap.to(".life-pictures img:nth-child(1)", {
+        scale: 0.5,
+        left: 220,
+        duration: 0.4,
+        delay: 0,
+      })
+      gsap.to("#vid1", {
+        scale: 0.05,
+        duration: 0.4,
+        left: -690,
+        top: -1800,
+        delay: 0,
+        rotate: 5,
+        filter: "blur(36px)",
+        borderRadius: 200,
+        webkitFilter: "blur(36px)"
+      })
+      gsap.to("#vid2", {
+        scale: 0.1,
+        duration: 0.4,
+        left: 80,
+        top: -680,
+        delay: 0,
+        rotate: -5,
+        filter: "blur(16px)",
+        borderRadius: 200,
+        webkitFilter: "blur(16px)"
+      })
+      vid1.pause();
+      vid2.pause();
+
+    })
+
+    const picimg = document.querySelector(".life-picutres img");
+    pics.addEventListener("mouseover", () => {
+      picimg.classList.add(".add");
+    })
+
+
+
+  </script>
+
+
+</body>
+
+</html>
