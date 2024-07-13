@@ -616,6 +616,7 @@ nav {
   border: 2px solid rgb(203, 18, 220);
   /* position: absolute; */
   width: 40rem;
+  border-radius: 1rem;
 }
 #project-3-back-img {
   position: absolute;
